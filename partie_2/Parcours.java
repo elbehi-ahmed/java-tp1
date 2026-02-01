@@ -1,10 +1,11 @@
-
-public class Parcours 
+package partie_2 ;
+public abstract class Parcours
 {
-    public int icour ;
-    public int jcour ;
-    public int count ;
-    public TableauEntier t ;
+
+    protected  int icour ;
+    protected  int jcour ;
+    protected  int count ;
+    protected TableauEntier t ;
 
     public Parcours(TableauEntier T) {
         t = T;
@@ -15,18 +16,9 @@ public class Parcours
         return !(icour == t.getHeight() - 1 && jcour == t.getWidth() - 1) ;
     }
 
-    public void suivant() {
-        if (hasNext()) {
-
-            if (jcour < t.getWidth() - 1) {
-                jcour++;
-            } else {
-
-                icour++ ;
-                jcour = 0 ;
-            }
-        }
-    }
+    public abstract void suivant() ;
+   
+    
 
     public int next() {
         int valeur;
