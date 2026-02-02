@@ -1,3 +1,4 @@
+package partie_1 ;
 public class TestParcoursLigne {
 
     public static void main(String[] args) {

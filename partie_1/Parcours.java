@@ -1,4 +1,4 @@
-
+package partie_1 ;
 public class Parcours 
 {
     public int icour ;

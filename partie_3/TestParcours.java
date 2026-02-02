@@ -1,7 +1,8 @@
-package partie_2 ;
+package partie_3;
+
 public class TestParcours 
 {
-    
+
     public static void main(String[] args) 
     {
         System.out.println("creation de tab  : ") ;
@@ -16,9 +17,15 @@ public class TestParcours
                 t.setvalueAt(i, j, (int)(Math.random() * 100));
             }
         }
-        ParcoursLigne pl = new ParcoursLigne(t) ;
-        ParcoursColonne pc = new ParcoursColonne(t) ;
-        ParcoursInverse pi = new ParcoursInverse(t) ;
+
+        Iterateur pl , pc , pi ;
+        pl = t.iterateur()  ;
+        t.configureIterator(1);
+        pc = t.iterateur()  ;
+        t.configureIterator(2);
+        pi = t.iterateur()  ;
+
+
         System.out.println("parcour ligne");
         for(int i = 0 ;i<w*h;i++)
         {
@@ -36,6 +43,10 @@ public class TestParcours
         {
             System.out.println(pi.next()); 
         }
+        System.out.println(pl.getClass());
     
     }
+    
 }
+
+    

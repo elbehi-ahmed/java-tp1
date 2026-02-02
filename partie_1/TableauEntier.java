@@ -1,3 +1,4 @@
+package partie_1 ;
 public class TableauEntier {
 
     private int [] [] t ;
