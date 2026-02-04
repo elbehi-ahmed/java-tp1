@@ -1,4 +1,4 @@
-package partie_3;
+package partie_3_4;
 
 public class ParcoursInverse extends Parcours 
 {

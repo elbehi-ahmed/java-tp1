@@ -1,4 +1,4 @@
-package partie_3;
+package partie_3_4;
 
 public class TableauEntier {
 
@@ -10,8 +10,11 @@ public class TableauEntier {
     public  static final int  ITERATEUR_INVERSE = 2 ;
     private int iteratorType = ITERATEUR_LIGNE;
     
-    public TableauEntier(int w , int h )
+    public TableauEntier(int w , int h ) throws TailleMaxError
     {
+        if(w>20 || h>20)
+            throw new TailleMaxError("la taille max de tab est depasse");
+        
         height = h ;
         width = w ;
         t = new int[w][h] ;
@@ -26,8 +29,13 @@ public class TableauEntier {
         return  t[c][l] ;
 
     }
-    public void setvalueAt(int c , int l ,int value)
+    public void setvalueAt(int c , int l ,int value) throws IntValueError
     {
+        if (value != (int)value)
+        {
+            throw new IntValueError("les valeur de tab doivent etre entier") ;
+        }
+
         t[c][l] =value ;
 
     }

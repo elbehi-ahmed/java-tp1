@@ -1,4 +1,4 @@
-package partie_3 ;
+package partie_3_4 ;
 public abstract class Parcours implements Iterateur
 {
 
@@ -17,9 +17,6 @@ public abstract class Parcours implements Iterateur
     }
 
     public abstract void suivant() ;
-   
-    
-
     public int next() {
         int valeur;
         
